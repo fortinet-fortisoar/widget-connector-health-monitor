@@ -15,6 +15,7 @@
 
 **Introducing the Connector Health Monitoring Widget**
 
+This Widget helps user to monitor health status of all installed connectors on the dashboard.
 
 | [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) |
 |----------------------------------------------|------------------------------------------------|--------------------------|
