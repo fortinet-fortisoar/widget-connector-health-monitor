@@ -1,6 +1,6 @@
 {
-    "name": "connectorHealthMonitoring",
-    "title": "Connector Health Monitoring",
+    "name": "connectorHealthMonitor",
+    "title": "Connector Health Monitor",
     "subTitle": "To monitor connector health",
     "version": "1.0.0",
     "published_date": 1697795843,
