@@ -8,11 +8,11 @@
   
   (function() {
     angular.module('cybersponse')
-      .controller('connectorHealthMonitoring100Ctrl', connectorHealthMonitoring100Ctrl);
+      .controller('connectorHealthMonitor100Ctrl', connectorHealthMonitor100Ctrl);
   
-    connectorHealthMonitoring100Ctrl.$inject = ['$scope', 'config', '$http', 'API', 'toaster', '$q', 'currentPermissionsService', '$timeout', '$filter', '_'];
+    connectorHealthMonitor100Ctrl.$inject = ['$scope', 'config', '$http', 'API', 'toaster', '$q', 'currentPermissionsService', '$timeout', '$filter', '_'];
   
-    function connectorHealthMonitoring100Ctrl($scope, config, $http, API, toaster, $q, currentPermissionsService, $timeout, $filter, _) {
+    function connectorHealthMonitor100Ctrl($scope, config, $http, API, toaster, $q, currentPermissionsService, $timeout, $filter, _) {
       $scope.processing = true;
       $scope.toolTip = {
         'unknown': 'Connector Health: Unavailable',
