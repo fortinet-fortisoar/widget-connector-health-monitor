@@ -1,0 +1,24 @@
+{
+    "name": "connectorHealthMonitoring",
+    "title": "Connector Health Monitoring",
+    "subTitle": "To monitor connector health",
+    "version": "1.0.0",
+    "published_date": 1697795843,
+    "releaseNotes": "unavailable",
+    "metadata": {
+        "snapshots":"",
+        "description": "https://github.com/fortinet-fortisoar/widget-connector-health-monitoring/blob/release/1.0.0/README.md",
+        "pages": [
+			"Dashboard",
+			"Reports",
+			"View Panel",
+			"Listing"        
+        ],
+        "certified": "No",
+        "publisher": "Fortinet",
+        "compatibility": [
+            "7.3.0"
+        ]
+    },
+    "development": true
+}

@@ -1,0 +1,25 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2023 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+  <form data-ng-submit="save()" class="noMargin" name="connectorHealthForm" data-ng-class="{'state-wait': processing }" novalidate>
+    <div class="modal-header">
+      <h3 class="modal-title col-md-10" data-ng-bind="::header"></h3>
+      <button type="button" class="close" data-ng-click="cancel()" data-dismiss="modal" aria-label="Close" id="close-edit-connector-health-btn">
+        <div aria-hidden="true" class="version-button">+</div>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group" data-ng-class="{ 'has-error': connectorHealthForm.title.$invalid && connectorHealthForm.title.$touched }">
+        <label for="title" class="control-label">Title<span class="text-danger">*</span></label>
+        <input id="title" name="title" type="text" class="form-control" data-ng-model="config.title" required>
+        <div data-cs-messages="connectorHealthForm.title"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="widget-edit-save" type="submit" class="btn btn-sm btn-primary"><i class="icon icon-check margin-right-sm"></i>Save</button>
+      <button id="widget-edit-cancel" type="button" class="btn btn-sm btn-default" data-ng-click="cancel()"><i class="icon icon-close margin-right-sm"></i>Close</button>
+    </div>
+  </form>
+  
