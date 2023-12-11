@@ -3,62 +3,77 @@
   All rights reserved.
   FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
   Copyright end -->
-  <div class="widget widget-container">
-    <div class="display-flex-space-between widget-title widget-title-padding">
-      <div class="widget-title-width padding-right-0 padding-left-0">
-        <h5 class="margin-top-0 margin-bottom-0 text-overflow font-1em">{{ config.title }}&nbsp;&nbsp;</h5>
-      </div>
-      <div class="widget-actions-width padding-right-0 padding-left-0">
-        <span class="fa btn widget-action-icon btn-sm pull-right margin-0" data-ng-click="collapsed = !collapsed" data-ng-class="{'fa-caret-up': !collapsed, 'fa-caret-down': collapsed}"></span>
-        <span class="fa icon icon-refresh btn btn-sm widget-action-icon pull-right margin-0" data-ng-click="refresh();" data-uib-tooltip="Refresh"></span>
-      </div>
+<div class="widget widget-container">
+  <div class="display-flex-space-between widget-title widget-title-padding">
+    <div class="widget-title-width padding-right-0 padding-left-0">
+      <h5 class="margin-top-0 margin-bottom-0 text-overflow font-1em">{{ config.title }}&nbsp;&nbsp;</h5>
     </div>
-    <div class="metric-widget-content" data-ng-hide="collapsed">
-      <div class="widget-cardview" data-ng-show="!processing">
-        <div class="metrics-container">
-          <div data-ng-init="loadChartData()">
-            <div class="connector-card-wrapper panel {{!collapse ? 'expand-class' : 'collapse-class'}}" data-ng-repeat="item in configuredConnectorList" data-ng-if="item.configuration.length > 0">
-              <div class="connector-label-header">
-                <div class="col-md-12 padding-left-0 padding-right-0">
-                  <div class="connector-card-header-text">
-                    <div class="connector-health-status display-flex" data-ng-click="collapse = !collapse">
-                        <div data-ng-if="item.icon_small">     
-                            <img style="max-height: 35px;" data-ng-src="{{item.icon_small}}" alt="Base64 Image">
-                            
-                        </div>
-                        <div class="margin-left-18">
-                            <div class="text-overflow" title="{{item.label}}">{{item.label}}</div>
-                            <div class="connector-card-secondary-header-text"><span>{{item.configuration.length}} {{(item.configuration.length === 1)?'Configuration':'Configurations'}} Monitored</span></div>
-                        </div>
-                        <div style="margin-left: auto;">
-                            <div class="pull-right padding-right-sm">
-                                <span class="connector-button fa fa-lg" data-ng-class="{'fa-question-circle': item.connectorHealthStatus === 'unknown', 'fa-check-circle': item.connectorHealthStatus === 'available', 'fa-exclamation-circle': item.connectorHealthStatus === 'disconnected'}"></span>
-                                <span class="connector-health-status-message {{item.connectorHealthStatus}}">{{item.connectorHealthStatusMessage}}</span>
-                                <span class="fa config-collapse-btn" data-ng-class="{'fa-caret-down': collapse, 'fa-caret-up': !collapse}"></span>
-                            </div>
-                        </div>
+    <div class="widget-actions-width padding-right-0 padding-left-0">
+      <span class="fa btn widget-action-icon btn-sm  margin-0" data-ng-click="collapsed = !collapsed"
+        data-ng-class="{'fa-caret-up': !collapsed, 'fa-caret-down': collapsed}"></span>
+      <span class="fa icon icon-refresh btn btn-sm widget-action-icon  margin-0" data-ng-click="refresh();"
+        data-uib-tooltip="Refresh"></span>
+    </div>
+  </div>
+  <div class="metric-widget-content" data-ng-hide="collapsed">
+    <div class="widget-cardview" data-ng-show="!processing">
+      <div class="metrics-container">
+        <div data-ng-init="loadChartData()">
+          <div class="connector-card-wrapper panel {{!collapse ? 'expand-class' : 'collapse-class'}}"
+            data-ng-repeat="item in configuredConnectorList" data-ng-if="item.configuration.length > 0">
+            <div class="connector-label-header">
+              <div class="col-md-12 padding-left-0 padding-right-0">
+                <div class="connector-card-header-text">
+                  <div class="connector-health-status display-flex-space-between" data-ng-click="collapse = !collapse">
+                    <div class="display-flex" >
+                      <div data-ng-if="item.icon_small">
+                        <img class="connector-logo-dimensions" data-ng-src="{{item.icon_small}}" alt="Base64 Image">
+                      </div>
+                      <div class="margin-left-18">
+                        <div class="text-overflow" title="{{item.label}}">{{item.label}}</div>
+                        <div class="connector-card-secondary-header-text"><span>{{item.configuration.length}}
+                            {{(item.configuration.length === 1)?'Configuration':'Configurations'}} Monitored</span></div>
+                      </div>
+                    </div>
+                    <div class="margin-left-auto;">
+                      <div class=" padding-right-sm">
+                        <span class="connector-button fa fa-lg"
+                          data-ng-class="{'fa-question-circle': item.connectorHealthStatus === 'unknown', 'fa-check-circle': item.connectorHealthStatus === 'available', 'fa-exclamation-circle': item.connectorHealthStatus === 'disconnected'}"></span>
+                        <span
+                          class="connector-health-status-message {{item.connectorHealthStatus}}">{{item.connectorHealthStatusMessage}}</span>
+                        <span class="fa config-collapse-btn"
+                          data-ng-class="{'fa-caret-down': collapse, 'fa-caret-up': !collapse}"></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="connector-config-wrapper">
                     <div data-ng-hide="collapse" class="col-md-12 connector-config">
                       <div class="row margin-top-md">
                         <div class="col-md-6">
-                          <span class="pull-left muted font-10px">Configuration Name</span>
+                          <span class=" muted font-10px">Configuration Name</span>
                         </div>
                         <div class="col-md-6">
-                          <div class="pull-right">
+                          <div>
                             <span class="config-status-wrapper muted font-10px"> Health Check Status</span>
                           </div>
                         </div>
                       </div>
-                      <div class="config-health-status row" data-ng-repeat="items in item.configuration track by $index">
+                      <div class="config-health-status row"
+                        data-ng-repeat="items in item.configuration track by $index">
                         <div class="col-md-6 padding-left-0 padding-right-sm">
-                          <span class="pull-left connector-config-header-text">{{items.name}} <span data-ng-if="items.agentName"> - {{items.agentName}}</span></span>
+                          <span class="connector-config-header-text">{{items.name}} <span data-ng-if="items.agentName">
+                              - {{items.agentName}}</span></span>
                         </div>
                         <div class="col-md-6 padding-right-0 padding-left-sm">
-                          <div class="pull-right">
+                          <div>
                             <div class="config-status-wrapper">
-                              <span data-uib-tooltip="{{items.configHealthStatus === 'unknown' ? toolTip.unknown : items.configHealthStatus === 'available' ? toolTip.available : items.configError}}" class="config-button fa" data-ng-class="{'fa-question-circle': items.configHealthStatus === 'unknown', 'fa-check-circle': items.configHealthStatus === 'available', 'fa-exclamation-circle': items.configHealthStatus === 'disconnected', 'fa-minus-circle' : items.configHealthStatus === 'deactivated'}" data-tooltip-append-to-body="true" data-tooltip-placement="top"></span>
-                              <span class="config-health-status-message {{items.configHealthStatus}}">{{items.configHealthMessage}}</span>
+                              <span
+                                data-uib-tooltip="{{items.configHealthStatus === 'unknown' ? toolTip.unknown : items.configHealthStatus === 'available' ? toolTip.available : items.configError}}"
+                                class="config-button fa"
+                                data-ng-class="{'fa-question-circle': items.configHealthStatus === 'unknown', 'fa-check-circle': items.configHealthStatus === 'available', 'fa-exclamation-circle': items.configHealthStatus === 'disconnected', 'fa-minus-circle' : items.configHealthStatus === 'deactivated'}"
+                                data-tooltip-append-to-body="true" data-tooltip-placement="top"></span>
+                              <span
+                                class="config-health-status-message {{items.configHealthStatus}}">{{items.configHealthMessage}}</span>
                             </div>
                           </div>
                         </div>
@@ -77,4 +92,3 @@
       </div>
     </div>
   </div>
-  
