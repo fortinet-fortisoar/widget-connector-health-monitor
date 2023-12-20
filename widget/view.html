@@ -51,15 +51,15 @@
                     <div data-ng-hide="collapse" class="col-md-12 connector-config">
                       <div class="margin-top-md display-flex-space-between">
                           <span class=" muted font-10px">Configuration Name</span>
-                          <div class="">
-                            <span class="config-status-wrapper muted font-10px"> Health Check Status</span>
+                          <div>
+                            <span class=" muted font-10px"> Health Check Status</span>
                           </div>
                       </div>
                       <div class="config-health-status display-flex-space-between"
                         data-ng-repeat="items in item.configuration track by $index">
                         <span class="connector-config-header-text">{{items.name}} <span data-ng-if="items.agentName">
                             - {{items.agentName}}</span></span>
-                        <div class="config-status-wrapper">
+                        <div class="">
                           <span
                             data-uib-tooltip="{{items.configHealthStatus === 'unknown' ? toolTip.unknown : items.configHealthStatus === 'available' ? toolTip.available : items.configError}}"
                             class="config-button fa"
