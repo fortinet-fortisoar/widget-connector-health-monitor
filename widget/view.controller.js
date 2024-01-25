@@ -208,7 +208,7 @@
               if (disconnectedCount > 0 || unknowCount > 0) {
                 connectors.connectorHealthStatus = disconnectedCount > 0 ? 'disconnected' : 'unknown';
                 if ((disconnectedCount === 1 || unknowCount === 1) && availableCount === 0) {
-                  connectors.connectorHealthStatusMessage = 'Unavailable';
+                  connectors.connectorHealthStatusMessage = disconnectedCount + unknowCount + ' Unavailable';
                 } else if ((unknowCount > 0 || disconnectedCount > 0) && availableCount >= 0) {
                   connectors.connectorHealthStatusMessage = disconnectedCount + unknowCount + ' Unavailable';
                 }
@@ -219,7 +219,6 @@
                 }else {
                   connectors.connectorHealthStatusMessage = 'All Available';
                 }
-  
               } else if (availableCount === 0 && disconnectedCount === 0) {
                 connectors.connectorHealthStatus = 'unknown';
                 connectors.connectorHealthStatusMessage = 'Health Check: Unavailable';
