@@ -1,8 +1,7 @@
-/* Copyright start
-  Copyright (C) 2008 - 2023 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end */
+/*  Copyright start
+  MIT License
+  Copyright (c) 2024 Fortinet Inc
+  Copyright end*/
   'use strict';
   /* jshint camelcase: false */
   
@@ -210,7 +209,7 @@
                 connectors.connectorHealthStatus = disconnectedCount > 0 ? 'disconnected' : 'unknown';
                 if ((disconnectedCount === 1 || unknowCount === 1) && availableCount === 0) {
                   connectors.connectorHealthStatusMessage = 'Unavailable';
-                } else if ((unknowCount > 0 || disconnectedCount > 0) && availableCount > 0) {
+                } else if ((unknowCount > 0 || disconnectedCount > 0) && availableCount >= 0) {
                   connectors.connectorHealthStatusMessage = disconnectedCount + unknowCount + ' Unavailable';
                 }
               } else if (unknowCount === 0 && disconnectedCount === 0) {
