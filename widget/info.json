@@ -6,19 +6,19 @@
     "published_date": 1697795843,
     "releaseNotes": "unavailable",
     "metadata": {
-        "snapshots":"",
-        "description": "https://github.com/fortinet-fortisoar/widget-connector-health-monitoring/blob/release/1.0.0/README.md",
+        "snapshots":["https://repo.fortisoar.fortinet.com/fsr-widgets/connectorHealthMonitor-1.0.0/images/Connectors.png"],
+        "description": "Each connector configuration row displays the count of available/unavailable configurations.",
         "pages": [
 			"Dashboard",
 			"Reports",
 			"View Panel",
-			"Listing"        
+			"Listing"
         ],
+        "help_online": "https://github.com/fortinet-fortisoar/widget-connector-health-monitor/blob/release/1.0.0/README.md",
         "certified": "No",
         "publisher": "Fortinet",
         "compatibility": [
             "7.3.0"
         ]
-    },
-    "development": true
+    }
 }
