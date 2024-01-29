@@ -6,7 +6,7 @@
 
 - **Publisher**: Fortinet  
 
-- **Compatibility**: 7.3.1 and later
+- **Compatibility**: Version 7.3.1 and later
 
 - **Applicable**: Dashboards
 
@@ -15,7 +15,7 @@
 
 **Introducing the Connector Health Monitor Widget**
 
-This Widget helps user to monitor health status of all installed connectors on the dashboard.
+This widget helps user to monitor health status of all the installed connectors on the dashboard.
 
 | [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) |
 |----------------------------------------------|------------------------------------------------|--------------------------|

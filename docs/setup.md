@@ -9,12 +9,12 @@
 
 # Configuration
 
-You can edit only the Title of this connector.
+You can edit only the **Title** of this connector.
 
 
 | Fields                                  | Description                                                                                                                         |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Title                                   | Specify a title for the Connector Health Monitor Tile.                                                                                        |
+| Title                                   | Specify a title for the Connector Health Monitor Tile.
 
 
 | [Usage](./usage.md) |
