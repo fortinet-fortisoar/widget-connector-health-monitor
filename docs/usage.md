@@ -6,7 +6,7 @@ The following image illustrates how the Connector Health widget is displayed on 
 
 ![Edit View](./res/Connectors.png)
 
-Each connector configuration row will display the number of configurations that are being monitored, for example, in the image above, all the connectors have 1 Configuration Monitored.
+Each connector configuration row displays the count of available/unavailable configurations.
 
 If any of the configurations of a connector is unavailable, then the widget will display "Unavailable" in the red color and the Health Check will be Unavailable. For example, in the above image the configuration of the Virus Total connector is unavailable. To view the details of the configuration being unavailable, click the down arrow on the connector row, to display the Health Check Status of that configuration. You will see that the Health Check Status of this configuration is "Disconnected". You can hover on the warning icon to know the reason for the configuration being disconnected.
 

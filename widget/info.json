@@ -7,7 +7,7 @@
     "releaseNotes": "unavailable",
     "metadata": {
         "snapshots":["https://repo.fortisoar.fortinet.com/fsr-widgets/connectorHealthMonitor-1.0.0/images/Connectors.png"],
-        "description": "Each connector configuration row will display the number of configurations that are being monitored, for example, in the image above, all the connectors have 1 Configuration Monitored.",
+        "description": "Each connector configuration row displays the count of available/unavailable configurations.",
         "pages": [
 			"Dashboard",
 			"Reports",
